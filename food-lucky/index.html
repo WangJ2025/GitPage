@@ -22,10 +22,9 @@
             <button onclick="resetSearch()">🔄 重置</button>
         </div>
         <div class="lucky-form">
-            <span>随机抽：</span>
-            <input type="number" id="luckyCount" min="1" max="100" value="1" disabled/>
-            <span>道菜</span>
-            <button onclick="doLuckyDraw()">🎲 开始抽奖</button>
+            <button onclick="doLuckyDraw()">🎲开始抽菜</button>
+            <span>每页条数</span>
+            <input type="number" id="pageSize" min="1" max="200" placeholder="一页展示多少条" value="12"/>
         </div>
     </section>
 
@@ -55,25 +54,24 @@
 
     <footer>
         <p>✨ 由 GitHub Pages 驱动｜数据存于 data.js｜图片存于 ./img/</p>
-        <p>💡 女朋友操作指南：点链接 → 搜/抽 → 点图片查看详情 → 加新菜？上传新图片+更新 data.js 即可</p>
+        <p>💡 操作指南：点链接 → 搜/抽 → 点图片查看详情 → 加新菜？上传新图片+更新 data.js 即可</p>
     </footer>
 </div>
 
 <script>
     // ✅ 配置项（可轻松修改）
-    const pageSize = 8;     // 每页显示数量
+    const foodLs = shuffleArray([...foodLsOK]);
+    let filteredList = [...foodLs]; // 初始全量
     const colPerRow = 4;    // 每行显示列数（影响 .results grid）
     let currentPage = 1;
-    let filteredList = [...foodLs]; // 初始全量
+    function getPageSize(){
+        return parseInt(document.getElementById('pageSize').value) || 1;
+    }
+    function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
+    }
     // 初始化函数
     function init() {
-        // 检查数据是否加载成功
-        if (!window.foodLs || !Array.isArray(window.foodLs)) {
-            document.getElementById('results').innerHTML = '<div class="loading" style="color: red;">❌ 数据加载失败！请检查 data.js 文件是否存在且格式正确。</div>';
-            console.error('数据加载失败: foodLs 未定义或不是数组');
-            return;
-        }
-
         // 数据加载成功，隐藏加载提示并渲染内容
         renderList();
         renderPagination();
@@ -90,8 +88,8 @@
 
     // 渲染列表
     function renderList() {
-        const start = (currentPage - 1) * pageSize;
-        const end = start + pageSize;
+        const start = (currentPage - 1) * getPageSize();
+        const end = start + getPageSize();
         const pageData = filteredList.slice(start, end);
         const container = document.getElementById('results');
 
@@ -117,7 +115,7 @@
 
     // 渲染分页
     function renderPagination() {
-        const totalPages = Math.ceil(filteredList.length / pageSize);
+        const totalPages = Math.ceil(filteredList.length / getPageSize());
         const pagiEl = document.getElementById('pagination');
         if (totalPages <= 1) {
             pagiEl.innerHTML = '';
@@ -188,7 +186,7 @@
             return;
         }
 
-        const count = parseInt(document.getElementById('luckyCount').value) || 1;
+        const count = 1;
         const n = Math.min(Math.max(count, 1), foodLs.length); // 确保在有效范围内
 
         // 创建一个副本并随机打乱
