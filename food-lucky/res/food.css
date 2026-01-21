@@ -120,6 +120,7 @@ button:hover { background: #2980b9; }
     border: 1px solid #ddd;
     background: white;
     cursor: pointer;
+    color: black;
     font-weight: bold;
     user-select: none;
 }
