@@ -1,8 +1,8 @@
 var foodLsOK = [
     { id: '20260001', name: '20260001.jpg', title: '爆炒肥肠', desc: '王师傅力作,老家肥肠蒜香去味道', 
         foodIn: ['肥肠', '火锅底料', '大蒜', '韭菜'], star: 5, hard: 4 },
-    { id: '20260002', name: '20260002.jpg', title: '猪肉芹菜饺子', desc: '芹菜要鲜甜的杀除水分', 
-        foodIn: ['猪肉', '芹菜', '大葱', '花椒面'], star: 5, hard: 2 },
+    { id: '20260002', name: '20260002.jpg', title: '猪肉莴笋饺子', desc: '芹菜要鲜甜的杀除水分',
+        foodIn: ['猪肉', '莴笋', '大葱', '花椒面'], star: 5, hard: 2 },
     { id: '20260003', name: '20260003.jpg', title: '猪肉荠菜饺子', desc: '荠菜饺子季节限定,独特的荠菜香不油腻', 
         foodIn: ['猪肉', '荠菜', '大葱', '花椒面'], star: 5, hard: 2 },
     { id: '20260004', name: '20260004.jpg', title: '铁板煎鸡', desc: '外皮酥脆,内部软嫩鲜香', 
@@ -127,8 +127,8 @@ var foodLsOK = [
 
     { id: '20260061', name: '20260061.jpg', title: '干锅牛蛙鄂州版', desc: '鄂州的牛蛙最好吃', 
         foodIn: ['牛蛙', '秘方'], star: 5, hard: 2 },
-    { id: '20260062', name: '20260062.jpg', title: '怪味鸡', desc: '怪味餐厅招牌', 
-        foodIn: ['四季豆', '厨艺'], star: 5, hard: 2 },
+    { id: '20260062', name: '20260062.jpg', title: '怪味八宝鸭', desc: '怪味餐厅招牌',
+        foodIn: ['鸭', '秘方'], star: 5, hard: 2 },
     { id: '20260063', name: '20260063.jpg', title: '老师傅爆炒虾仁', desc: '老师傅爆炒虾仁好吃', 
         foodIn: ['虾仁', '秘方'], star: 5, hard: 2 },    
     { id: '20260064', name: '20260064.jpg', title: '油焖小龙虾老家版', desc: '越放越入味', 
@@ -139,4 +139,6 @@ var foodLsOK = [
         foodIn: ['面粉'], star: 5, hard: 2 },
     { id: '20260067', name: '20260067.jpg', title: '陕西油泼面', desc: '陕西的面有嚼劲,这是金融港的一家', 
         foodIn: ['火腿', '面粉'], star: 5, hard: 1 },
+    { id: '20260068', name: '20260068.jpg', title: '汤面-襄阳牛肉面版', desc: '武汉的一家有花椒和牛油很香,这是金融港的一家',
+        foodIn: ['豆芽', '面粉'], star: 5, hard: 1 },
 ];
