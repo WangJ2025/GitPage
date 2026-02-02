@@ -141,4 +141,8 @@ var foodLsOK = [
         foodIn: ['火腿', '面粉'], star: 5, hard: 1 },
     { id: '20260068', name: '20260068.jpg', title: '汤面-襄阳牛肉面版', desc: '武汉的一家有花椒和牛油很香,这是金融港的一家',
         foodIn: ['豆芽', '面粉'], star: 5, hard: 1 },
+    { id: '20260069', name: '20260069.jpg', title: '芹菜虾仁酱香版', desc: '王师傅作品,虾仁需要不粘锅',
+        foodIn: ['虾仁', '芹菜'], star: 5, hard: 1 },
+    { id: '20260070', name: '20260070.jpg', title: '趴地小菠菜', desc: '季节限定补铁,好吃',
+        foodIn: ['菠菜', '大蒜'], star: 5, hard: 1 },
 ];

@@ -60,7 +60,8 @@
 
 <script>
     // ✅ 配置项（可轻松修改）
-    const foodLs = shuffleArray([...foodLsOK]);
+    // const foodLs = shuffleArray([...foodLsOK]);
+    const foodLs = foodLsOK.reverse();
     let filteredList = [...foodLs]; // 初始全量
     const colPerRow = 4;    // 每行显示列数（影响 .results grid）
     let currentPage = 1;
